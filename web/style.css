@@ -1,0 +1,39 @@
+p{
+    color:rgb(6, 129, 163);
+
+}
+
+/* universal */
+*{
+    color:rgb(18, 35, 1);
+}
+/* class selector best practice */
+.myclass{
+    background-color: rgb(117, 51, 27);
+}
+
+/* id selector */
+#myclass{
+    background-color: rgb(193, 9, 221);
+}
+/* .auth-from{
+
+} */
+
+ body{
+    margin: 0px;
+    padding: 0px;
+    background-color: burlywood;
+    height: 10vw;
+    width: 10px;
+    font-display: center;
+    
+} 
+/* 
+.auth-form{
+    height: 0cm;
+    width: 10px;
+    background-color: cadetblue;
+    border:1px saddlebrown;
+} */
+
