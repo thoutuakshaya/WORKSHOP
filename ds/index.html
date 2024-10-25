@@ -5,31 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <style>a.ex1:hover,a.ex1:active{color: red;}
-    </style> -->
+    
 </head>
-
 <body>
-    <div class="row">
-        <div class="column">
-        <!-- <style> 
-            div {
-              /* width:fit-content;
-              height:calc(); */
-
-            }
-            
-            @keyframes example {
-              from {background-color: red;}
-              to {background-color: yellow;}
-            }
-            </style>    -->
-        </div>
-
-    <form action="" class="login-form">
-        <input type="email" id="" class="login-input"  placeholder="email" required >
-        <input type="password" id=""name="head" class="login-input" placeholder="password" >
-        <input type="submit" class="login-btn" value="login" > </form></div>
+    <form action="" class="login-form" onsubmit="login(event)">
+        <input type="email" class="login-input" id="email" placeholder="email" required >
+        <input type="password"class="login-input" id="password" placeholder="password" >
+        <input type="submit"  value="login" class="login-btn" > </form>
+    <!-- <button class="login-btn" onclick="myfunction()"  >Click</button></button> -->
 </body>
 
 <script>
@@ -57,11 +40,58 @@
         
 
     }
-    console.log(obj,obj2);
-    let arr=["a",obj,x,obj2]
-    console.log(arr);
-</script>
+    console.log(obj2.name)
+    const{name,age,isalive}=obj2
+    console.log(name)
+    //console.log(obj,obj2);
+    //let arr=["a",obj,x,obj2]
+    //console.log(arr);
+    let arr=[5,"hdffsdj"]
+    let arr2=[1,2,3,4,5,6];
+    let arr3=[arr,arr2];
+    let arr4=[...arr,...arr2];
+    console.log(arr3);
+    console.log(arr4);
 
-<p><a class="ex1" href="default.asp">this link changes color</a></p>
+
+
+
+    function myfunction(){
+        console.log("hello sir")
+        // console.error("warning")
+        // concole.warn("hello")
+        
+    }
+    //myfunction()
+
+    function login(event){
+        event.preventDefault()
+        let email=document.getElementById('email').value;
+        let password=document.getElementById('password').value;
+        console.log("login:" +email+""+password);
+        if (password.length<5){
+            alert('password should contains more than 5 letters')
+        }
+        else if(email=="admin@gmail.com" && password==="123456"){
+            alert('login success')
+            API()
+        }
+        else{
+            alert("invalid")
+        }
+    }
+async function API(){
+    console.log("called API");
+    try{
+        const response=await fetch('https://671b70f12c842d92c37fec13.mockapi.io/productapp/products')
+        if(response.status==200)
+            console.log("success")
+        
+        console.log(await response.json())
+    }catch(error){
+        console.error(error)
+    }
+}
+</script>
 
 </html>
