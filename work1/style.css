@@ -1,0 +1,70 @@
+h1{
+    color:rgb(129, 15, 235);
+    text-shadow: 2px 2px 4px #000000;
+    background-color: rgb(245, 242, 239);
+    text-align: center;
+}
+body{
+    background-color: #020202;
+}
+div{
+    font-size:25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 3px;
+    height: 3px;
+    border-radius: 100px;
+    background-color: rgb(201, 220, 173);
+    border: 1px azure;
+    border-width: 2px;
+    /* transition-property: width;
+    transition-timing-function: linear;
+    transition-duration: 20s; */
+    animation-name: exam ;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    position: relative;
+    animation-iteration-count: infinite;
+    align-items: center;
+    padding: 60px;
+    align-self: center;
+    align-tracks: center;
+    animation-fill-mode:forwards;
+}
+div:hover{
+    width:300px;
+    animation:eam 2s linear;
+}
+/* hover is used such that when cursor moves on ,it changes */
+#two{
+    transform: rotateX(150deg);
+}
+/* the above is used for rotating text accordingly */
+@keyframes exam {
+    0%{background-color: red; left:0px;top: 0px;}
+    10%{background-color: yellow;left:0px;top: 800px;}
+    20%{background-color: rgb(15, 9, 9);right:300px;bottom: 300px;}
+    30%{background-color: yellow;left:800px;top:0px;}
+    40%{background-color: red;left:0px;top: 0px;}
+    /* 50%{background-color: yellow;left:0px;top: 0px;} */
+    60%{background-color: rgb(114, 20, 154);left:0px;top: 300px;}
+    70%{background-color: yellow;right:800px;top: 0px;}
+    80%{background-color: red;right:1000px;top:1040px;}
+    90%{background-color: yellow;left:0px;top: 900px;}
+    100%{background-color: rgb(24, 202, 101);left:600px;bottom: 0px;}
+    
+ }
+ /* for color change we used as many as variations we needed ,we can also use from to */
+/* for image we need to save image in same directory as we save our code */ */
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
+
+/* tried to make entire picture come on the block */
+.akshaya{
+    width: 0px;
+    height:0px;
+}
