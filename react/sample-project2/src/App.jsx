@@ -1,5 +1,6 @@
-
+import DefaultExportSample from "./DefaultExportSample";
 import Navbar from "./components/Navbar"
+import { Module1,Module2 } from "./ModuleExportSample"
 const App = () => {
     const data={
         appname:"hello"
@@ -12,11 +13,32 @@ const App = () => {
         <p className="text-red-500">{testy}</p>
         {logodata}
         <Navbar appdata={data} logo={logodata} vi={ki}></Navbar>
+        <DefaultExportSample/>
+        <Module1/>
+
+        <Module2/>
+        <div>exporting two functions</div>
     </>
   )
 }
 
 export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //  function App(){
 //     return(

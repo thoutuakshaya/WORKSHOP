@@ -6,3 +6,15 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+
+
+**Errors is got in app.jsx :**
+1.we must include these to render the modules 
+<DefaultExportSample/>
+<Module1/>
+
+<Module2/>
+
+2.import and export modules should be clearly declared
