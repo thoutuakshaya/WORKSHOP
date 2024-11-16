@@ -8,7 +8,7 @@ const Contact = () => {
         <div className='w-full h-40 flex justify-center items-center text-3xl text-purple-500 font-semibold'>
           Contact Us
         </div>
-        <div className='w-[75%] h-[45rem] shadow-lg flex flex-row justify-center items-center'>
+        <div className='w-[95%] h-[45rem] shadow-lg flex flex-row justify-center items-center'>
           <div className='h-[90%] w-1/2 flex flex-col justify-center items-center gap-4'>
             <div className='h-[31%] w-[70%] border rounded-md flex flex-col justify-center items-center text-lg font-semibold gap-4 shadow-md'>
               <Mail className='h-8 w-8 text-purple-600' />

@@ -1,7 +1,8 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const AdminLeftBar = () => {
+  const Navigate = useNavigate()
   const Linksdata = [
     {
       title: 'Dashboard',
@@ -24,6 +25,10 @@ const AdminLeftBar = () => {
       path: '/admin/settings'
     }
   ]
+  const handleLogout = () => {
+    localStorage.removeItem('token')
+    Navigate('/')
+  }
   return (
     <div className='w-full h-screen shadow-purple-400 shadow-md flex justify-center items-center'>
       <div className='h-full w-full flex flex-col'>

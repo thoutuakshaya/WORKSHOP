@@ -1,8 +1,26 @@
-import { Outlet } from "react-router-dom"
+import { Outlet , useNavigate} from "react-router-dom"
 import AdminLeftBar from "../components/Admin/AdminLeftBar"
 import AdminTopBar from "../components/Admin/AdminTopBar"
+import { useEffect, useState } from "react"
+import { getRole, isLoginValid } from "../service/auth"
+import { Loader, Loader2 } from "lucide-react"
 
 const AdminLayout = () => {
+    const Navigate = useNavigate()
+    const [renderAdmin, setRenderAdmin] = useState(false)
+    const role = getRole()
+    const checkNavigation = () => {
+        if (!isLoginValid || role !== "ADMIN") {
+            Navigate('/')
+        }
+        else {
+            setRenderAdmin(true)
+        }
+    }
+
+    useEffect(() => {
+        checkNavigation()
+    }, [Navigate])
     return (
         <>
             <div className="w-screen h-screen flex flex-row justify-center items-center overflow-hidden">

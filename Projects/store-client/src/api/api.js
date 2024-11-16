@@ -1,9 +1,28 @@
 
 import axios from 'axios'
 //import { User } from 'lucide-react'
-
+import { getToken } from '../service/auth'
 
 const API = 'http://localhost:4000'
+
+const axiosInstance=axios.create({
+    baseURL: API,
+})
+
+
+
+axiosInstance.interceptors.request.use(
+    (config)=>{
+        const token=getToken()
+        if(token){
+            config.headers.Authorizaton=`${token}`}
+            return config;
+
+        },
+        (error)=>{return Promise.reject(error)}
+    
+)
+
 
 // ProductEndPonts
 const getProducts = () => axios.get(`${API}/products/all`)

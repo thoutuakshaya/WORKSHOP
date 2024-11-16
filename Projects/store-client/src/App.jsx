@@ -10,6 +10,7 @@ import AdminUsers from './pages/Admin/AdminUsers'
 import AdminSettings from './pages/Admin/AdminSettings'
 import AdminOrders from './pages/Admin/AdminOrders'
 import TwClasses from './pages/TwClasses'
+import NotFound  from './components/NotFound'
 // import {} from 'react'
 const App = () => {
     return (
@@ -29,6 +30,7 @@ const App = () => {
                         <Route path='/admin/settings' element={<AdminSettings/>} />
                         <Route path='/admin/orders' element={<AdminOrders/>} />
                     </Route>
+                    <Route path='*'element={<NotFound/>}/>
                 </Routes>
             </BrowserRouter>
         </>
